@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="15A284" minimumToolsVersion="Automatic">
+    <entity name="Passport" representedClassName="" syncable="YES">
+        <attribute name="expiryDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="issueDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="issuedPlace" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="passportNo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="passport" inverseEntity="Person" syncable="YES"/>
+    </entity>
+    <entity name="Person" representedClassName="" syncable="YES">
+        <attribute name="designation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="passport" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Passport" inverseName="person" inverseEntity="Passport" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Person" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Passport" positionX="232" positionY="-18" width="128" height="118"/>
+    </elements>
+</model>
